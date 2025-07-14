@@ -31,13 +31,13 @@ public class RegistrarPaciente extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Se obtienen los valores ingresados por el usuario
-                String cedula = cedulatextField1.getText();
-                String historial = historialtextField1.getText();
-                String nombre = nombretextField1.getText();
-                String apellido = apellidotextField1.getText();
-                String telefono = tltextField2.getText();
-                String edad = edadtextField3.getText();
-                String descripcion = descripciontextField4.getText();
+                String cedula = cedulatextField1.getText().trim();
+                String historial = historialtextField1.getText().trim();
+                String nombre = nombretextField1.getText().trim();
+                String apellido = apellidotextField1.getText().trim();
+                String telefono = tltextField2.getText().trim();
+                String edad = edadtextField3.getText().trim();
+                String descripcion = descripciontextField4.getText().trim();
 
                 //Se validan los campos no esten vacios
                 if (cedula.isEmpty() || historial.isEmpty() || nombre.isEmpty() ||

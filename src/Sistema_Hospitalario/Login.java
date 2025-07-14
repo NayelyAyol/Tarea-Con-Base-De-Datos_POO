@@ -15,20 +15,20 @@ public class Login extends JFrame{
     private JPasswordField passwordField1;
 
     public Login(){
-        setContentPane(Principal);
-        setTitle("Login");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(250,250);
-        setLocationRelativeTo(null);
-        setVisible(true);
+        setContentPane(Principal); //Se establece el panel principal
+        setTitle("Login"); //Titulo de la ventana
+        setDefaultCloseOperation(EXIT_ON_CLOSE); //Cierre del programa al cerrar ventana
+        setSize(250,250); //Tamaño
+        setLocationRelativeTo(null); //Se centra a la ventana
+        setVisible(true); //Hace visible a la ventana
 
         //Accion para el boton ingresar
         ingresarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //se obtiene el texto de los campos
-                String usuario = usuariotextField1.getText();
-                String password = String.valueOf(passwordField1.getPassword());
+                String usuario = usuariotextField1.getText().trim();
+                String password = String.valueOf(passwordField1.getPassword()).trim();
 
                 //Se valida que los campos no esten vacios
                 if (usuario.isEmpty() || password.isEmpty()){
@@ -59,7 +59,7 @@ public class Login extends JFrame{
 
                 } catch (SQLException ex) { //Manejo de errores en SQL
                     ex.printStackTrace();
-                    JOptionPane.showMessageDialog(null, "Error en la conexion");
+                    JOptionPane.showMessageDialog(null, "Error en la conexión");
                 }
             }
         });

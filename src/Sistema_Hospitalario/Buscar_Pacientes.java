@@ -26,7 +26,7 @@ public class Buscar_Pacientes extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Se obtiene el dato ingresado por el usuario
-                String cedula = cedulatextField1.getText();
+                String cedula = cedulatextField1.getText().trim();
 
                 //Se valida que el campo no este vacio
                 if (cedula.isEmpty()){
